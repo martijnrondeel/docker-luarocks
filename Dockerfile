@@ -4,7 +4,7 @@ LABEL maintainer="Martijn Rondeel <martijn@rondeel.email>"
 ENV LUA_VERSION 5.3.4
 ENV LUAROCKS_VERSION 2.4.4
 
-RUN apk add --update --no-cache readline-dev libc-dev make gcc wget git
+RUN apk add --update --no-cache readline-dev libc-dev make gcc wget git zip unzip
 
 RUN wget https://www.lua.org/ftp/lua-${LUA_VERSION}.tar.gz -O - | tar -xzf -
 WORKDIR lua-$LUA_VERSION
